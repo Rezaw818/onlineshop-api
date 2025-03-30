@@ -1,0 +1,3680 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "OnlineShop API",
+    "description": "java onlineshop",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://127.0.0.1",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/api/panel/user/update_profile": {
+      "put": {
+        "tags": [
+          "user-panel-controller"
+        ],
+        "operationId": "editProfile",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProfileDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseUserDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/user/edit": {
+      "put": {
+        "tags": [
+          "user-panel-controller"
+        ],
+        "operationId": "edit",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseUserDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/user/change_pass": {
+      "put": {
+        "tags": [
+          "user-panel-controller"
+        ],
+        "operationId": "changePassword",
+        "parameters": [
+          {
+            "name": "dto",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/ChangePassDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseUserDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/user/change_pass/admin": {
+      "put": {
+        "tags": [
+          "user-panel-controller"
+        ],
+        "operationId": "changePasswordByAdmin",
+        "parameters": [
+          {
+            "name": "userDto",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/UserDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseUserDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/slider/swap_up/{id}": {
+      "put": {
+        "tags": [
+          "slider-panel-controller"
+        ],
+        "operationId": "swapUp",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseBoolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/slider/swap_down/{id}": {
+      "put": {
+        "tags": [
+          "slider-panel-controller"
+        ],
+        "operationId": "swapDown",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseBoolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/slider/edit": {
+      "put": {
+        "tags": [
+          "slider-panel-controller"
+        ],
+        "operationId": "edit_1",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SliderDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseSliderDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/size/edit": {
+      "put": {
+        "tags": [
+          "size-panel-controller"
+        ],
+        "operationId": "edit_2",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SizeDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseSizeDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/product/edit": {
+      "put": {
+        "tags": [
+          "product-panel-controller"
+        ],
+        "operationId": "edit_3",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseProductDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/product/category/edit": {
+      "put": {
+        "tags": [
+          "product-category-panel-controller"
+        ],
+        "operationId": "edit_4",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductCategoryDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseProductCategoryDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/nav/swap_up/{id}": {
+      "put": {
+        "tags": [
+          "nav-panel-controller"
+        ],
+        "operationId": "swapUp_1",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseBoolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/nav/swap_down/{id}": {
+      "put": {
+        "tags": [
+          "nav-panel-controller"
+        ],
+        "operationId": "swapDown_1",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseBoolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/nav/edit": {
+      "put": {
+        "tags": [
+          "nav-panel-controller"
+        ],
+        "operationId": "edit_5",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NavDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseNavDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/content/edit": {
+      "put": {
+        "tags": [
+          "content-panel-controller"
+        ],
+        "operationId": "edit_6",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContentDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseContentDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/color/edit": {
+      "put": {
+        "tags": [
+          "color-panel-controller"
+        ],
+        "operationId": "edit_7",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ColorDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseColorDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/blog/edit": {
+      "put": {
+        "tags": [
+          "blog-panel-controller"
+        ],
+        "operationId": "edit_8",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BlogDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseBlogDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/user/login": {
+      "post": {
+        "tags": [
+          "user-controller"
+        ],
+        "operationId": "login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseLimitedUserDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/payment/request": {
+      "post": {
+        "tags": [
+          "payment-controller"
+        ],
+        "operationId": "requestPayment",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoToPaymentDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/user/add": {
+      "post": {
+        "tags": [
+          "user-panel-controller"
+        ],
+        "operationId": "add",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseUserDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/slider/add": {
+      "post": {
+        "tags": [
+          "slider-panel-controller"
+        ],
+        "operationId": "add_1",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SliderDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseSliderDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/size/add": {
+      "post": {
+        "tags": [
+          "size-panel-controller"
+        ],
+        "operationId": "add_2",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SizeDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseSizeDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/product/category/add": {
+      "post": {
+        "tags": [
+          "product-category-panel-controller"
+        ],
+        "operationId": "add_3",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductCategoryDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseProductCategoryDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/product/add": {
+      "post": {
+        "tags": [
+          "product-panel-controller"
+        ],
+        "operationId": "add_4",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseProductDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/nav/add": {
+      "post": {
+        "tags": [
+          "nav-panel-controller"
+        ],
+        "operationId": "add_5",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NavDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseNavDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/file/upload": {
+      "post": {
+        "tags": [
+          "file-panel-controller"
+        ],
+        "operationId": "upload",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                },
+                "required": [
+                  "file"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseFileDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/content/add": {
+      "post": {
+        "tags": [
+          "content-panel-controller"
+        ],
+        "operationId": "add_6",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContentDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseContentDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/color/add": {
+      "post": {
+        "tags": [
+          "color-panel-controller"
+        ],
+        "operationId": "add_7",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ColorDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseColorDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/blog/add": {
+      "post": {
+        "tags": [
+          "blog-panel-controller"
+        ],
+        "operationId": "add_8",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BlogDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseBlogDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/slider": {
+      "get": {
+        "tags": [
+          "slider-controller"
+        ],
+        "operationId": "getAll",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseListSliderDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/product/{id}": {
+      "get": {
+        "tags": [
+          "product-controller"
+        ],
+        "operationId": "getById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseProductDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/product/top/{type}": {
+      "get": {
+        "tags": [
+          "product-controller"
+        ],
+        "operationId": "getTopProduct",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "Popular",
+                "Newest",
+                "Cheap",
+                "Expensive"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseListProductDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/product/category": {
+      "get": {
+        "tags": [
+          "product-controller"
+        ],
+        "operationId": "getAllCategories",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseListProductCategoryDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/payment/verify": {
+      "get": {
+        "tags": [
+          "payment-controller"
+        ],
+        "operationId": "verifyPayment",
+        "parameters": [
+          {
+            "name": "Authority",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Status",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/user": {
+      "get": {
+        "tags": [
+          "user-panel-controller"
+        ],
+        "operationId": "getAll_1",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIPanelResponseListUserDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/user/{id}": {
+      "get": {
+        "tags": [
+          "user-panel-controller"
+        ],
+        "operationId": "getById_1",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseUserDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "user-panel-controller"
+        ],
+        "operationId": "delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseBoolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/slider": {
+      "get": {
+        "tags": [
+          "slider-panel-controller"
+        ],
+        "operationId": "getAll_2",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIPanelResponseListSliderDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/size": {
+      "get": {
+        "tags": [
+          "size-panel-controller"
+        ],
+        "operationId": "getAll_3",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIPanelResponseListSizeDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/product": {
+      "get": {
+        "tags": [
+          "product-panel-controller"
+        ],
+        "operationId": "getAll_4",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIPanelResponseListProductDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/product/category": {
+      "get": {
+        "tags": [
+          "product-category-panel-controller"
+        ],
+        "operationId": "getAll_5",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIPanelResponseListProductCategoryDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/product/cat/{cid}": {
+      "get": {
+        "tags": [
+          "product-panel-controller"
+        ],
+        "operationId": "getAllByCategory",
+        "parameters": [
+          {
+            "name": "cid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIPanelResponseListProductDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/nav": {
+      "get": {
+        "tags": [
+          "nav-panel-controller"
+        ],
+        "operationId": "getAll_6",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIPanelResponseListNavDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/invoice/{id}": {
+      "get": {
+        "tags": [
+          "invoice-panel-controller"
+        ],
+        "operationId": "get",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseInvoiceDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/invoice/user/{uid}": {
+      "get": {
+        "tags": [
+          "invoice-panel-controller"
+        ],
+        "operationId": "getAllById",
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseListInvoiceDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/invoice/my-invoice": {
+      "get": {
+        "tags": [
+          "invoice-panel-controller"
+        ],
+        "operationId": "getMineList",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseListInvoiceDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/invoice/mine/{id}": {
+      "get": {
+        "tags": [
+          "invoice-panel-controller"
+        ],
+        "operationId": "getMineInfo",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseInvoiceDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/file": {
+      "get": {
+        "tags": [
+          "file-panel-controller"
+        ],
+        "operationId": "getAll_7",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIPanelResponseListFileDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/content": {
+      "get": {
+        "tags": [
+          "content-panel-controller"
+        ],
+        "operationId": "getAll_8",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIPanelResponseListContentDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/color": {
+      "get": {
+        "tags": [
+          "color-panel-controller"
+        ],
+        "operationId": "getAll_9",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "color",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIPanelResponseListColorDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/blog": {
+      "get": {
+        "tags": [
+          "blog-panel-controller"
+        ],
+        "operationId": "getAll_10",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIPanelResponseListBlogDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/nav": {
+      "get": {
+        "tags": [
+          "nav-controller"
+        ],
+        "operationId": "getAll_11",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseListNavDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/content": {
+      "get": {
+        "tags": [
+          "content-controller"
+        ],
+        "operationId": "getAll_12",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseListContentDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/content/{key}": {
+      "get": {
+        "tags": [
+          "content-controller"
+        ],
+        "operationId": "getByKey",
+        "parameters": [
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseContentDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Blog": {
+      "get": {
+        "tags": [
+          "blog-controller"
+        ],
+        "operationId": "getAll_13",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseListBlogDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Blog/{id}": {
+      "get": {
+        "tags": [
+          "blog-controller"
+        ],
+        "operationId": "getById_2",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseSingleBlogDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/slider/{id}": {
+      "delete": {
+        "tags": [
+          "slider-panel-controller"
+        ],
+        "operationId": "delete_1",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseBoolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/product/{id}": {
+      "delete": {
+        "tags": [
+          "product-panel-controller"
+        ],
+        "operationId": "delete_2",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseBoolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/product/category/{id}": {
+      "delete": {
+        "tags": [
+          "product-category-panel-controller"
+        ],
+        "operationId": "delete_3",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseBoolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/nav/{id}": {
+      "delete": {
+        "tags": [
+          "nav-panel-controller"
+        ],
+        "operationId": "delete_4",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseBoolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/file/{id}": {
+      "delete": {
+        "tags": [
+          "file-panel-controller"
+        ],
+        "operationId": "delete_5",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseBoolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/panel/blog/{id}": {
+      "delete": {
+        "tags": [
+          "blog-panel-controller"
+        ],
+        "operationId": "delete_6",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIResponseBoolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "UpdateProfileDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "mobile": {
+            "type": "string"
+          },
+          "tel": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "postalCode": {
+            "type": "string"
+          }
+        }
+      },
+      "APIResponseUserDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "$ref": "#/components/schemas/UserDto"
+          }
+        }
+      },
+      "CustomerDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "tel": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "postalCode": {
+            "type": "string"
+          }
+        }
+      },
+      "PermissionDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "RoleDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PermissionDto"
+            },
+            "uniqueItems": true
+          }
+        }
+      },
+      "UserDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "username": {
+            "type": "string"
+          },
+          "mobile": {
+            "type": "string"
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "registerDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "enable": {
+            "type": "boolean"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RoleDto"
+            },
+            "uniqueItems": true
+          },
+          "customerDto": {
+            "$ref": "#/components/schemas/CustomerDto"
+          }
+        }
+      },
+      "ChangePassDto": {
+        "type": "object",
+        "properties": {
+          "oldPassword": {
+            "type": "string"
+          },
+          "newPassword": {
+            "type": "string"
+          },
+          "newPassword2": {
+            "type": "string"
+          }
+        }
+      },
+      "APIResponseBoolean": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "boolean"
+          }
+        }
+      },
+      "File": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "uuid": {
+            "type": "string"
+          },
+          "extension": {
+            "type": "string"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "SliderDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "title": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          },
+          "orderNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "image": {
+            "$ref": "#/components/schemas/File"
+          }
+        }
+      },
+      "APIResponseSliderDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "$ref": "#/components/schemas/SliderDto"
+          }
+        }
+      },
+      "SizeDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "APIResponseSizeDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "$ref": "#/components/schemas/SizeDto"
+          }
+        }
+      },
+      "ColorDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          },
+          "hex": {
+            "type": "string"
+          }
+        }
+      },
+      "FileDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          },
+          "uuid": {
+            "type": "string"
+          },
+          "extension": {
+            "type": "string"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "ProductCategoryDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "image": {
+            "$ref": "#/components/schemas/FileDto"
+          },
+          "enable": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ProductDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "enable": {
+            "type": "boolean"
+          },
+          "exist": {
+            "type": "boolean"
+          },
+          "price": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "visitCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "addDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "image": {
+            "$ref": "#/components/schemas/FileDto"
+          },
+          "colors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ColorDto"
+            },
+            "uniqueItems": true
+          },
+          "sizes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SizeDto"
+            },
+            "uniqueItems": true
+          },
+          "category": {
+            "$ref": "#/components/schemas/ProductCategoryDto"
+          }
+        }
+      },
+      "APIResponseProductDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "$ref": "#/components/schemas/ProductDto"
+          }
+        }
+      },
+      "APIResponseProductCategoryDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "$ref": "#/components/schemas/ProductCategoryDto"
+          }
+        }
+      },
+      "NavDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "title": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          },
+          "orderNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "enable": {
+            "type": "boolean"
+          }
+        }
+      },
+      "APIResponseNavDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "$ref": "#/components/schemas/NavDto"
+          }
+        }
+      },
+      "ContentDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "keyName": {
+            "type": "string"
+          },
+          "valueContent": {
+            "type": "string"
+          }
+        }
+      },
+      "APIResponseContentDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "$ref": "#/components/schemas/ContentDto"
+          }
+        }
+      },
+      "APIResponseColorDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "$ref": "#/components/schemas/ColorDto"
+          }
+        }
+      },
+      "BlogDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "title": {
+            "type": "string"
+          },
+          "subtitle": {
+            "type": "string"
+          },
+          "publishDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "visitCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "image": {
+            "$ref": "#/components/schemas/FileDto"
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Published",
+              "Draft"
+            ]
+          }
+        }
+      },
+      "APIResponseBlogDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "$ref": "#/components/schemas/BlogDto"
+          }
+        }
+      },
+      "LoginDto": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
+      "APIResponseLimitedUserDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "$ref": "#/components/schemas/LimitedUserDto"
+          }
+        }
+      },
+      "LimitedUserDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "username": {
+            "type": "string"
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "token": {
+            "type": "string"
+          }
+        }
+      },
+      "BasketItem": {
+        "type": "object",
+        "properties": {
+          "productId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "colorId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sizeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "GoToPaymentDto": {
+        "type": "object",
+        "properties": {
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "mobile": {
+            "type": "string"
+          },
+          "tel": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "postalCode": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BasketItem"
+            }
+          },
+          "gateway": {
+            "type": "string",
+            "enum": [
+              "Zarinpal",
+              "CardToCard",
+              "MellatBank",
+              "TejaratBank",
+              "PasargadBank"
+            ]
+          }
+        }
+      },
+      "APIResponseString": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "string"
+          }
+        }
+      },
+      "APIResponseFileDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "$ref": "#/components/schemas/FileDto"
+          }
+        }
+      },
+      "APIResponseListSliderDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SliderDto"
+            }
+          }
+        }
+      },
+      "APIResponseListProductDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductDto"
+            }
+          }
+        }
+      },
+      "APIResponseListProductCategoryDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductCategoryDto"
+            }
+          }
+        }
+      },
+      "APIPanelResponseListUserDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserDto"
+            }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "APIPanelResponseListSliderDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SliderDto"
+            }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "APIPanelResponseListSizeDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SizeDto"
+            }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "APIPanelResponseListProductDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductDto"
+            }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "APIPanelResponseListProductCategoryDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductCategoryDto"
+            }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "APIPanelResponseListNavDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NavDto"
+            }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "APIResponseInvoiceDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "$ref": "#/components/schemas/InvoiceDto"
+          }
+        }
+      },
+      "Color": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          },
+          "hex": {
+            "type": "string"
+          }
+        }
+      },
+      "Customer": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "tel": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "postalCode": {
+            "type": "string"
+          }
+        }
+      },
+      "Invoice": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "payedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Payed",
+              "InProgress"
+            ]
+          },
+          "totalAmount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoiceItem"
+            }
+          }
+        }
+      },
+      "InvoiceDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "payedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Payed",
+              "InProgress"
+            ]
+          },
+          "totalAmount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "user": {
+            "$ref": "#/components/schemas/UserDto"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoiceItemDto"
+            }
+          }
+        }
+      },
+      "InvoiceItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "invoice": {
+            "$ref": "#/components/schemas/Invoice"
+          },
+          "product": {
+            "$ref": "#/components/schemas/Product"
+          },
+          "size": {
+            "$ref": "#/components/schemas/Size"
+          },
+          "color": {
+            "$ref": "#/components/schemas/Color"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "price": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "InvoiceItemDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "invoice": {
+            "$ref": "#/components/schemas/Invoice"
+          },
+          "product": {
+            "$ref": "#/components/schemas/ProductDto"
+          },
+          "size": {
+            "$ref": "#/components/schemas/SizeDto"
+          },
+          "color": {
+            "$ref": "#/components/schemas/ColorDto"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "price": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "Permission": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "parent": {
+            "$ref": "#/components/schemas/Permission"
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Permission"
+            }
+          }
+        }
+      },
+      "Product": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "enable": {
+            "type": "boolean"
+          },
+          "exist": {
+            "type": "boolean"
+          },
+          "price": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "visitCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "addDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "image": {
+            "$ref": "#/components/schemas/File"
+          },
+          "colors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Color"
+            },
+            "uniqueItems": true
+          },
+          "sizes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Size"
+            },
+            "uniqueItems": true
+          },
+          "category": {
+            "$ref": "#/components/schemas/ProductCategory"
+          }
+        }
+      },
+      "ProductCategory": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "enable": {
+            "type": "boolean"
+          },
+          "image": {
+            "$ref": "#/components/schemas/File"
+          },
+          "products": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Product"
+            }
+          }
+        }
+      },
+      "Role": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Permission"
+            },
+            "uniqueItems": true
+          }
+        }
+      },
+      "Size": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "username": {
+            "type": "string"
+          },
+          "mobile": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "registerDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "enable": {
+            "type": "boolean"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Role"
+            },
+            "uniqueItems": true
+          },
+          "customer": {
+            "$ref": "#/components/schemas/Customer"
+          }
+        }
+      },
+      "APIResponseListInvoiceDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoiceDto"
+            }
+          }
+        }
+      },
+      "APIPanelResponseListFileDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FileDto"
+            }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "APIPanelResponseListContentDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ContentDto"
+            }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "APIPanelResponseListColorDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ColorDto"
+            }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "APIPanelResponseListBlogDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BlogDto"
+            }
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "APIResponseListNavDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NavDto"
+            }
+          }
+        }
+      },
+      "APIResponseListContentDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ContentDto"
+            }
+          }
+        }
+      },
+      "APIResponseListBlogDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BlogDto"
+            }
+          }
+        }
+      },
+      "APIResponseSingleBlogDto": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Success",
+              "Error",
+              "Failed",
+              "Redirect",
+              "Forbidden",
+              "AccessDenied"
+            ]
+          },
+          "data": {
+            "$ref": "#/components/schemas/SingleBlogDto"
+          }
+        }
+      },
+      "SingleBlogDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "title": {
+            "type": "string"
+          },
+          "subtitle": {
+            "type": "string"
+          },
+          "publishDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "visitCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "image": {
+            "$ref": "#/components/schemas/FileDto"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
