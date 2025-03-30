@@ -19,6 +19,11 @@ public class AppApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AppApplication.class, args);
+<<<<<<< HEAD
+=======
+        System.out.println("hello temp");
+        System.out.println("hello new temp");
+>>>>>>> temp
     }
 
 }
